@@ -1,0 +1,40 @@
+# Project Prometheus
+
+> Prometheus (announced November 2025 as Project Prometheus) is a San Francisco based
+> artificial intelligence company co-founded by Jeff Bezos and Vik Bajaj, who serve as
+> co-CEOs. It builds what it calls an "artificial general engineer" — physical-AI models
+> intended to automate the design, simulation and manufacture of complex physical systems
+> across computing, aerospace, automotive production and drug development. The company
+> launched with roughly $6.2B in funding and raised a ~$12B Series B in June 2026 at a
+> reported $41B valuation, with offices in San Francisco, London and Zurich.
+
+## Status
+
+- **No public API.** As of 2026-08-02 this company publishes no developer portal, no
+  documentation, no API reference, no OpenAPI/AsyncAPI/GraphQL/MCP contract, no SDKs and
+  no first-party GitHub organization. It is still operating in stealth.
+- The company host `www.prometheus.ai` answers every path — including `/robots.txt`,
+  `/llms.txt` and the whole `/.well-known/` surface — with a Vercel Security Checkpoint
+  interstitial (HTTP 429), so nothing can be retrieved anonymously.
+- No `api.`, `docs.`, `developer.` or `app.` subdomain resolves in DNS.
+- Do not confuse this company with the **Prometheus monitoring system** (prometheus.io,
+  a CNCF project) or with **Prometheus Fuels**. They are unrelated organizations that
+  share the name, and the `prometheus` namespace in npm/PyPI/Docker belongs to the
+  monitoring project.
+
+## Company
+
+- [Website](https://www.prometheus.ai/): Company site (bot-challenged; no public content retrievable).
+- [Forge Global listing](https://forgeglobal.com/project-prometheus_stock/): Secondary-market
+  private-stock listing — the source this company entered the API Evangelist network from.
+
+## Artifacts in this repo
+
+- [apis.yml](apis.yml): APIs.json 0.20 company record.
+- [Domain security](security/project-prometheus-domain-security.yml): Probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture for prometheus.ai.
+- [Well-known probe](well-known/project-prometheus-well-known.yml): Full STEP 0b contract-discovery probe log (all blocked / not found).
+
+---
+generated: '2026-08-02'
+method: generated
+source: apis.yml + repo artifacts (no provider-published llms.txt exists; /llms.txt returns 429)

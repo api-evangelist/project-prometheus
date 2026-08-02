@@ -1,7 +1,18 @@
 aid: project-prometheus
 name: Project Prometheus
-description: 'Project Prometheus is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Prometheus (announced in November 2025 as Project Prometheus) is a San
+  Francisco based artificial intelligence company co-founded by Jeff Bezos and Vik
+  Bajaj, who serve as co-CEOs. The company builds what it calls an "artificial general
+  engineer" — physical-AI models intended to automate the design, simulation and manufacture
+  of complex physical systems across computing, aerospace, automotive production and
+  drug development, learning from real-world trial and error rather than from text
+  corpora alone. It launched with roughly $6.2B in funding and raised a ~$12B Series
+  B in June 2026 at a reported $41B valuation, backed by Bezos, ARCH Venture Partners,
+  JPMorgan Chase, Goldman Sachs and BlackRock, with offices in San Francisco, London
+  and Zurich. As of August 2026 the company remains in stealth: prometheus.ai is served
+  entirely behind a Vercel bot challenge, and no public developer portal, documentation,
+  API, first-party GitHub organization, package or machine-readable contract could
+  be located.'
 url: https://raw.githubusercontent.com/api-evangelist/project-prometheus/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +23,13 @@ created: '2026-08-02'
 modified: '2026-08-02'
 tags:
 - Company
+- Artificial Intelligence
+- Physical AI
+- Machine Learning
+- Manufacturing
+- Aerospace
+- Engineering
+- Stealth
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +38,15 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://www.prometheus.ai/
+- type: Investors
   url: https://forgeglobal.com/project-prometheus_stock/
+- type: DomainSecurity
+  url: security/project-prometheus-domain-security.yml
+- type: LLMsTxt
+  url: llms/project-prometheus-llms.txt
+x-enrichment:
+  date: '2026-08-02'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1

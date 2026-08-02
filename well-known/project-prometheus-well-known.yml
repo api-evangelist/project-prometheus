@@ -1,0 +1,93 @@
+generated: '2026-08-02'
+method: probed
+source: https://www.prometheus.ai/
+host: https://www.prometheus.ai
+result: blocked
+note: >-
+  Every path on the company host — including the entire /.well-known/ surface — is
+  answered by a Vercel Security Checkpoint interstitial (HTTP 429, text/html,
+  ~33KB, <title>Vercel Security Checkpoint</title>). No document could be retrieved
+  anonymously. This is NOT evidence that the documents are absent, and it is NOT
+  evidence that they are present; it records that the host refuses anonymous
+  discovery. No WellKnown / SecurityTxt / APICatalog pointer is wired in apis.yml
+  because nothing was actually retrieved. Re-probe on a later round.
+documents:
+- path: /.well-known/security.txt
+  status: 429
+  blocked_by: vercel-security-checkpoint
+- path: /.well-known/openid-configuration
+  status: 429
+  blocked_by: vercel-security-checkpoint
+- path: /.well-known/oauth-authorization-server
+  status: 429
+  blocked_by: vercel-security-checkpoint
+- path: /.well-known/oauth-protected-resource
+  status: 429
+  blocked_by: vercel-security-checkpoint
+- path: /.well-known/api-catalog
+  status: 429
+  blocked_by: vercel-security-checkpoint
+- path: /.well-known/ai-plugin.json
+  status: 429
+  blocked_by: vercel-security-checkpoint
+- path: /.well-known/agent-card.json
+  status: 429
+  blocked_by: vercel-security-checkpoint
+- path: /.well-known/agent.json
+  status: 429
+  blocked_by: vercel-security-checkpoint
+- path: /robots.txt
+  status: 429
+  blocked_by: vercel-security-checkpoint
+- path: /llms.txt
+  status: 429
+  blocked_by: vercel-security-checkpoint
+x-contract-discovery:
+  note: >-
+    STEP 0b contract discovery run in full against every host that resolves for this
+    company. Only the apex/www host exists; no api./docs./developer./app. subdomain
+    resolves in DNS. No machine-readable contract of any kind was found.
+  hosts_probed:
+  - host: www.prometheus.ai
+    dns: 216.150.1.1
+    reachable: true
+    all_paths_status: 429
+  - host: prometheus.ai
+    dns: 216.150.1.1
+    reachable: true
+    all_paths_status: 429
+  - host: api.prometheus.ai
+    dns: NXDOMAIN
+    reachable: false
+  - host: docs.prometheus.ai
+    dns: NXDOMAIN
+    reachable: false
+  - host: developer.prometheus.ai
+    dns: NXDOMAIN
+    reachable: false
+  - host: developers.prometheus.ai
+    dns: NXDOMAIN
+    reachable: false
+  - host: app.prometheus.ai
+    dns: NXDOMAIN
+    reachable: false
+  openapi_paths_probed:
+  - /openapi.json
+  - /openapi.yaml
+  - /swagger.json
+  - /v1/openapi.json
+  - /api-docs
+  - /docs
+  - /redoc
+  graphql: not-found
+  mcp: not-found
+  agent_card: not-found
+  github_org: >-
+    None. github.com/prometheus-ai (2017, Clojure chatbot libs),
+    github.com/PrometheusAI (2016), github.com/Project-Prometheus (2012) and
+    github.com/Prometheus-Industries (2024, 0 repos) all predate or are unrelated
+    to this company and none references prometheus.ai — no first-party org exists.
+  packages: >-
+    No first-party client library found on npm. The "prometheus" name space in the
+    public registries belongs to the unrelated Prometheus monitoring project
+    (prometheus.io, CNCF) and must not be attributed to this company.

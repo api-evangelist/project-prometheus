@@ -48,7 +48,7 @@ tags:
 - Company
 - Artificial Intelligence
 - Physical AI
-- Machine-Learning
+- Machine Learning
 - Manufacturing
 - Aerospace
 - Engineering
@@ -62,6 +62,7 @@ tags_raw:
 - Aerospace
 - Engineering
 - Stealth
+- Machine-Learning
 apis: []
 maintainers:
 - FN: Kin Lane

@@ -1,0 +1,11 @@
+[
+  {
+    "repo": "project-prometheus",
+    "captured_at": "2026-10-11T192058",
+    "source_url": "https://www.prometheus.ai/",
+    "source_type": "Website",
+    "file": "project-prometheus-2026-10-11T192058.png",
+    "bytes": 695855,
+    "capture": "playwright-local"
+  }
+]
